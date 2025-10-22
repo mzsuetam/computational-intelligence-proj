@@ -3,8 +3,8 @@ title: |
     Comparative Analysis of Deep Learning Architectures \
     for Aerial Image Segmentation
 subtitle: | 
-    Evaluating CNN-based and U-Net models \
-    for accurate semantic segmentation of aerial imagery.
+        Evaluating CNN- and U-Net-based architectures \
+        for accurate semantic segmentation of aerial imagery.
 shorttitle: DL for Aerial Image Segmentation
 author: Mateusz Mazur
 shortauthor: M. Mazur
