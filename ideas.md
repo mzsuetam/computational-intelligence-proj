@@ -13,3 +13,16 @@ Supervised
 U-Net, DeepLabv3+
 Train both from scratch on labeled aerial dataset
 
+---
+
+251105 notes:
+
+- Baseline proposition: https://www.kaggle.com/code/abhinavsp0730/semantic-segmentation-by-implementing-fcn
+- implement CSE-Unet <- the main goal, most interesting solution
+- unet implementation: https://towardsdatascience.com/cook-your-first-u-net-in-pytorch-b3297a844cf3/
+- what next?
+	- maybe take classic cnn, and unet 
+	- maybe implement the multiresnet 
+	- MAYBE connect cse with multi
+	- maybe just take some other solutions (easy way – SemTorch: https://forums.fast.ai/t/semtorch-a-semantic-segmentation-library-build-above-fastai/79194) and compare them to the CSE-Unet appraoch
+	
