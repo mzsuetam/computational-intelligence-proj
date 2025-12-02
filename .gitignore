@@ -1,2 +1,4 @@
 datasets/*
-notebooks/learners/*
+!datasets/ISPRS_Potsdam
+
+*.pkl
