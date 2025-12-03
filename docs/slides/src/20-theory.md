@@ -102,3 +102,7 @@ The MultiRes-UNet is an improved version of the original UNet network, designed 
 *   **Distinction:** Edges realize the distinction between adjacent buildings.
 *   **Performance Gain:** Integrating semantic edges enhanced the average quantitative results for Intersection Over Union (IOU) by **0.78%** (from 93.35% to 94.13%).
 *   **Overall Competency:** MultiRes-UNet achieved 93.14% IOU accuracy (with data augmentation), proving its success in building object extraction compared to state-of-the-art models like UNet (92.40%), DeeplabV3 (89.48%), and ResNet (88.84%).
+
+## Architecture Selection
+
+After the overview, the **CSE-Unet** [@wang2020context] architecture was selected for further exploration and analysis in this project due to its promising results in addressing key challenges in aerial image segmentation.

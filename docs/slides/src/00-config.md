@@ -1,6 +1,6 @@
 ---
 title: |
-    Comparative Analysis of Deep Learning Architectures \
+    Analysis of Deep Learning Architectures \
     for Aerial Image Segmentation
 subtitle: | 
         Evaluating CNN- and U-Net-based architectures \
