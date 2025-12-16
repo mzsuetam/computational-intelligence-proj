@@ -1,0 +1,5 @@
+# rsync -Paz --exclude-from .rsyncignore source target
+
+.git
+datasets/
+**/*.pkl

@@ -5,7 +5,7 @@ fetch-hil-dataset:
     rm semantic-segmentation-of-aerial-imagery.zip && cd ..
 
 sync-to-remote:
-    rsync -avz . pc-local:~/Documents/Uni/computational-intelligence/proj
+    rsync -Paz --exclude-from .rsyncignore . pc-local:~/Documents/Uni/computational-intelligence/proj
 
 sync-from-remote:
-    rsync -avz pc-local:~/Documents/Uni/computational-intelligence/proj/ .
+    rsync -Paz --exclude-from .rsyncignore pc-local:~/Documents/Uni/computational-intelligence/proj/ .
