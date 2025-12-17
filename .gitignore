@@ -1,4 +1,7 @@
 datasets/*
 !datasets/ISPRS_Potsdam
 
-*.pkl
+**/*.pkl
+**/*.pth
+experiments/tb-log/**/*
+notebooks/models/baseline-unet-best.pth
