@@ -47,3 +47,6 @@ Train both from scratch on labeled aerial dataset
 - dropout made the learning process visibly reduce overfitting for cse-unet (sce-unet w/ and w/o dropout comparison)
 - technicalities: new tools used, new methods, full experimental process (shame about the limited time)  
 
+---
+
+? micro batching 
