@@ -31,9 +31,19 @@ Train both from scratch on labeled aerial dataset
 
 17.12.2025 notes
 
-to be discussed in the report:
+**changes for cse-updated**:
+
+- dropout in double conv
+- custom loss
+- SaveModelCallback
+- Continue Training with Lower LR: After the initial 100 epochs, the model is likely "hot." Run a second phase of training with a much lower learning rate to let it settle into the minimum.
+- history plotter update
+
+
+**to be discussed in the report**:
 
 - show the differences on the subset for the first performance comparison (resnet50 net vs cse-unet)
 - then show the final results on the full dataset for the baseline (resnet34 unet) vs cse-unet (simmilar param count)
 - dropout made the learning process visibly reduce overfitting for cse-unet (sce-unet w/ and w/o dropout comparison)
 - technicalities: new tools used, new methods, full experimental process (shame about the limited time)  
+
