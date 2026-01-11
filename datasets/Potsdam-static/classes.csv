@@ -1,0 +1,8 @@
+class_id,name,color_name,color
+0,Impervious surfaces,white,"(255, 255, 255)"
+1,Buildings,blue,"(0, 0, 255)"
+2,Low vegetation,cyan,"(0, 255, 255)"
+3,Trees,green,"(0, 255, 0)"
+4,Cars,yellow,"(255, 255, 0)"
+5,Clutter,red,"(255, 0, 0)"
+6,Undefined,black,"(0, 0, 0)"

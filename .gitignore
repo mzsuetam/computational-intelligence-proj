@@ -1,5 +1,5 @@
 datasets/*
-!datasets/ISPRS_Potsdam
+!datasets/Potsdam-static
 
 **/*.pkl
 **/*.pth
