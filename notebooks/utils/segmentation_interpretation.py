@@ -420,6 +420,7 @@ class MySegmentationInterpretation(SegmentationInterpretation):
             # 3. Get data
             inps, _, targs, decoded, _ = self[idxs]
             decoded_batch = self.dl.decode_batch((inps, targs))
+            decoded_batch = decoded_batch.argmax(1)  # Convert to class indices
 
             # 4. Plot
             fig, ax = plt.subplots(len(idxs), 2, figsize=(figsize[0], figsize[1] * len(idxs)))
