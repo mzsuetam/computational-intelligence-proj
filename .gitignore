@@ -9,3 +9,5 @@ datasets/*
 **/*.pth
 experiments/tb-log/**/*
 notebooks/models/baseline-unet-best.pth
+
+assets/

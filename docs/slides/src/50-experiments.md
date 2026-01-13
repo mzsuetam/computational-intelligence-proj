@@ -34,7 +34,7 @@ Please note that the CSE-Unet model has significantly fewer parameters (36M vs 3
 
 ### Baseline
 
-![Baseline Training History](../../../experiments/baseline-34/history.png)
+![Baseline Training History](../../../experiments/old-ds/baseline-34/history.png)
 
 ---
 
@@ -42,7 +42,7 @@ Please note that the CSE-Unet model has significantly fewer parameters (36M vs 3
 
 #### Base implementation
 
-![Base implementation History](../../../experiments/cse/history.png)
+![Base implementation History](../../../experiments/old-ds/cse/history.png)
 
 ---
 
@@ -57,7 +57,7 @@ Please note that the CSE-Unet model has significantly fewer parameters (36M vs 3
 ---
 
 
-![Updated implementation history](../../../experiments/cse-updated/history.png)
+![Updated implementation history](../../../experiments/old-ds/cse-updated/history.png)
 
 ## Results
 
@@ -78,12 +78,12 @@ Total params:
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-![Baseline](../../../experiments/baseline-34/target-pred.png){height=80%}
+![Baseline](../../../experiments/old-ds/baseline-34/target-pred.png){height=80%}
 
 :::
 ::: {.column width="50%"}
 
-![CSE-Unet](../../../experiments/cse/target-pred.png){height=80%}
+![CSE-Unet](../../../experiments/old-ds/cse/target-pred.png){height=80%}
 
 :::
 ::::::::::::::
