@@ -14,7 +14,7 @@ Such approach required some manual data preparation (i.e. cutting images into ti
 
 ---
 
-![Class balance in the training subset of the full dataset](img/class-balance.png){height=90%}
+![Class balance in the training subset of the full dataset](img/class-balance.png){height=100%}
 
 ## Initial comparison
 
@@ -40,15 +40,15 @@ I tried using the combined CrossEntropy + Dice loss, but for bigger input sizes 
 
 ---
 
-:::: {style="display: flex;"}
-:::
+:::: {.columns}
+::: {.column width="50%"}
 
-![MC of Baseline](../../../experiments/new-ds/baseline_34/confusion_matrix.png){width=45%}
+![MC of Baseline](../../../experiments/new-ds/baseline_34/confusion_matrix.png){height=100%}
 
 :::
-:::
+::: {.column width="50%"}
 
-![CM of CSE-Unet](../../../experiments/new-ds/cse/confusion_matrix.png){width=45%}
+![CM of CSE-Unet](../../../experiments/new-ds/cse/confusion_matrix.png){height=100%}
 
 :::
 ::::
@@ -56,15 +56,15 @@ I tried using the combined CrossEntropy + Dice loss, but for bigger input sizes 
 ---
 
 
-:::: {style="display: flex;"}
-:::
+:::: {.columns}
+::: {.column width="50%"}
 
-![Predictions/Targets of Baseline](../../../experiments/new-ds/baseline_34/pred-targets.png){width=45%}
+![Predictions/Targets of Baseline](../../../experiments/new-ds/baseline_34/pred-targets.png){height=100%}
 
 :::
-:::
+::: {.column width="50%"}
 
-![Predictions/Targets of CSE-Unet](../../../experiments/new-ds/cse/pred-targets.png){width=45%}
+![Predictions/Targets of CSE-Unet](../../../experiments/new-ds/cse/pred-targets.png){height=100%}
 
 :::
 ::::
@@ -73,24 +73,28 @@ I tried using the combined CrossEntropy + Dice loss, but for bigger input sizes 
 
 To take the advantage of the fact that CSE-Unet trains stably on the full dataset, I ran further experiments to improve its performance.
 
+\vspace{1em}
 ### "Phase 2"
 
 Firstly, using the lowered lr, I trained the CSE-Unet for another 30 epochs. This led to steady improvements in validation metrics without overfitting.
 
+\vspace{1em}
 ### "Phase 3"
 
 Then, I tried utilizing the combined CrossEntropy + Dice loss function again with low learning rate as it is known for the ability to "understand" the "object instances" better, as it cates to both pixel-wise accuracy and overall shape similarity. 
 Unfortunately, the try did not lead to any improvements, but did not significantly degrade the overall performance either.
 
-:::: {style="display: flex;"}
-:::
+---
 
-![CM of CSE-Unet](../../../experiments/new-ds/cse/confusion_matrix.png){width=45%}
+:::: {.columns}
+::: {.column width="50%"}
+
+![CM of CSE-Unet](../../../experiments/new-ds/cse/confusion_matrix.png){height=100%}
 
 :::
-:::
+::: {.column width="50%"}
 
-![MC of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/confusion_matrix.png){width=45%}
+![MC of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/confusion_matrix.png){height=100%}
 
 :::
 ::::
@@ -98,15 +102,15 @@ Unfortunately, the try did not lead to any improvements, but did not significant
 ---
 
 
-:::: {style="display: flex;"}
-:::
+:::: {.columns}
+::: {.column width="50%"}
 
-![Predictions/Targets of CSE-Unet](../../../experiments/new-ds/cse/pred-targets.png){width=45%}
+![Predictions/Targets of CSE-Unet](../../../experiments/new-ds/cse/pred-targets.png){height=100%}
 
 :::
-:::
+::: {.column width="50%"}
 
-![Predictions/Targets of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/pred-targets.png){width=45%}
+![Predictions/Targets of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/pred-targets.png){height=100%}
 
 :::
 ::::
@@ -115,15 +119,15 @@ Unfortunately, the try did not lead to any improvements, but did not significant
 ---
 
 
-:::: {style="display: flex;"}
-:::
+:::: {.columns}
+::: {.column width="50%"}
 
-![MC of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/confusion_matrix.png){width=45%}
+![MC of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/confusion_matrix.png){height=100%}
 
 :::
-:::
+::: {.column width="50%"}
 
-![CM of Phase 3 CSE-Unet](../../../experiments/new-ds/cse_phase_3/confusion_matrix.png){width=45%}
+![CM of Phase 3 CSE-Unet](../../../experiments/new-ds/cse_phase_3/confusion_matrix.png){height=100%}
 
 :::
 ::::
@@ -131,15 +135,15 @@ Unfortunately, the try did not lead to any improvements, but did not significant
 ---
 
 
-:::: {style="display: flex;"}
-:::
+:::: {.columns}
+::: {.column width="50%"}
 
-![Predictions/Targets of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/pred-targets.png){width=45%}
+![Predictions/Targets of Phase 2 CSE-Unet](../../../experiments/new-ds/cse_phase_2/pred-targets.png){height=100%}
 
 :::
-:::
+::: {.column width="50%"}
 
-![Predictions/Targets of Phase 3 CSE-Unet](../../../experiments/new-ds/cse_phase_3/pred-targets.png){width=45%}
+![Predictions/Targets of Phase 3 CSE-Unet](../../../experiments/new-ds/cse_phase_3/pred-targets.png){height=100%}
 
 :::
 ::::

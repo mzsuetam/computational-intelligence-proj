@@ -11,6 +11,7 @@ This project successfully implemented and evaluated the **Context and Semantic E
 ##  Architectural Analysis
 
 While raw metrics are important, the most significant finding was the difference in **training dynamics**:
+
 * **Volatility vs. Stability:** The ResNet Baseline exhibited high volatility and suffered a "catastrophic collapse" at Epoch 50, likely due to gradient instability in deep layers. In contrast, CSE-Unet demonstrated smooth, linear convergence. Notably, the specialized Multi-level Receptive Field Blocks (RFB) in CSE-Unet acted as a natural regularizer, helping to prevent such training crashes.
 * **The "Slow Burner" Effect:** CSE-Unet learned more complex semantic relationships (context) rather than overfitting to simple features. Its steady improvement curve indicates that it had not yet fully converged, suggesting potential for even higher scores given more training time.
 * **Generalization:** The introduction of **Dropout (0.2)** and **Weight Decay** in the updated CSE implementation successfully closed the generalization gap, solving the initial overfitting issues.
