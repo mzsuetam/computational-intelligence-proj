@@ -2,7 +2,7 @@
 
 ## Learning Aerial Image Segmentation From Online Maps [@kaiser2017learning]
 
-### Using Addapted FCNs to Leverage Noisy Crowdsourced Data
+### Using Adapted FCNs to Leverage Noisy Crowdsourced Data
 
 <!-- **Challenge:** Deep Convolutional Neural Networks (CNNs) are the top-performing method for high-resolution semantic labeling, but they are **extremely data hungry**. Manual annotation is costly and scales poorly. -->
 

@@ -4,7 +4,7 @@
 
 Course: Computational Intelligence
 
-Project slides: [slides.pdf](docs/slides/out/slides-latest.pdf)
+Project slides: [Analysis of Deep Learning Architectures for Aerial Image Segmentation](docs/slides/out/slides-latest.pdf)
 
 ## Project Overview
 

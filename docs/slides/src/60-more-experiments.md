@@ -8,7 +8,7 @@ Then, further experiments were performed on the full dataset (2500 images) to ev
 
 ## Migration to Full Dataset
 
-As the dataset provided on Kaggle was incomplete and seemd misslabeled, I migrated to a original full dataset provided by the [The International Society for Photogrammetry and Remote Sensing webpage](https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/2d-sem-label-potsdam.aspx).
+As the dataset provided on Kaggle was incomplete and eemed mislabeled, I migrated to a original full dataset provided by the [The International Society for Photogrammetry and Remote Sensing webpage](https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/2d-sem-label-potsdam.aspx).
 
 Such approach required some manual data preparation (i.e. cutting images into tiles, cleaning, splitting). However, the new dataset provided significantly more data ($\approx 3300$ 512x512 tiles after cleaning vs ~2400 256x256 tiles in the Kaggle dataset), which positively impacted the model performance and generalization.
 

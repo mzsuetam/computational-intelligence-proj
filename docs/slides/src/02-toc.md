@@ -19,3 +19,11 @@
 ---
 \tableofcontents[sections=6-10] 
 -->
+
+---
+
+\vspace{1em}
+
+\begin{center}
+    \href{https://github.com/mzsuetam/computational-intelligence-proj}{\textbf{GitHub Project Repository}}
+\end{center}
