@@ -25,7 +25,7 @@ Training data derived from OSM is inherently noisy due to: coregistration errors
 
 - **Improved Generalization:** Training on a large variety of data spanning multiple different cities (e.g., Chicago, Paris, Zurich, Berlin) improves the classifier’s ability to generalize to new, unseen locations (e.g., Tokyo).
 - **Complete Substitution:** Semantic segmentation can be learned without any manual labeling by relying solely on large-scale noisy OSM labels, achieving acceptable results. The sheer volume of training data can largely compensate for lower accuracy.
-- **Augmentation:** Even when a comfortable amount of accurate training data is available (the "gold standard"), pretraining with massive OSM data from other sites further improves results (e.g., boosting F1-score for the road class).
+- **Augmentation:** Even when a comfortable amount of accurate training data is available (the "gold standard"), pretraining with massive OSM data from other sites further improves results (e.g., boosting Dice Multi-score for the road class).
 
 <!-- 4.  **Partial Substitution (The Trade-Off):** Pretraining with large-scale OSM labels allows for the replacement of the vast majority (85%) of costly, high-quality manual labels. Fine-tuning a model pretrained on OSM data with only a small dedicated training set compensates for a large portion of the potential performance loss. -->
 
@@ -65,7 +65,7 @@ Training data derived from OSM is inherently noisy due to: coregistration errors
 <!-- 
 **Performance and Insights:**
 
-*   CSE-UNet, integrating both the dual-path encoder and RFB-based skip pathways, consistently achieved the best accuracy (highest mean Intersection Over Union (mIoU) and mean F1 (mF1)) across the ISPRS Potsdam and Vaihingen datasets.
+*   CSE-UNet, integrating both the dual-path encoder and RFB-based skip pathways, consistently achieved the best accuracy (highest mean Intersection Over Union (mIoU) and mean Dice Multi (mDice Multi)) across the ISPRS Potsdam and Vaihingen datasets.
 *   **Qualitative Improvement:** CSE-UNet produced **more accurate and coherent segmentation results** compared to standard UNet. For example, it generated less blurring edges for buildings and was competent in segmenting cars with large intra-class variances. -->
 
 

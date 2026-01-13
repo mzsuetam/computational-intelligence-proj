@@ -1,6 +1,6 @@
 # Experiments
 
-## Preliminary experiments recall
+## Preliminary experiments recap
 
 > Slide 34
 
@@ -61,7 +61,7 @@ Please note that the CSE-Unet model has significantly fewer parameters (36M vs 3
 
 ## Results
 
-|   model                      |      t_loss |      t_F1 |    t_mIoU |    v_loss |      v_F1 |    v_mIoU |
+|   model                      |      t_loss |      t_dice_multi|    t_jaccard_coef_multi |    v_loss |      v_dice_multi|    v_jaccard_coef_multi |
 |:-----------------------------|------------:|----------:|----------:|----------:|----------:|----------:|
 | Baseline (ResNet34)     |    0.578534 |  0.730393 |  0.591593 |  0.691645 |  0.694157 |  0.54865 |
 | CSE-Unet (Base)              |    **0.391817** |  **0.810424** |  **0.693776** |  **0.533609** |  0.743653 |  0.61987  |
@@ -92,7 +92,7 @@ Total params:
 
 ### Key Findings
 * **Efficiency vs. Performance:** 
-  * **CSE-Unet** outperforms the **ResNet34 Baseline** by **~7 p.p.** in mIoU ($0.62$ vs $0.55$) with a comparable parameter count (~36M vs ~41M).
+  * **CSE-Unet** outperforms the **ResNet34 Baseline** by **~7 p.p.** in Jaccard Coeff Multi ($0.62$ vs $0.55$) with a comparable parameter count (~36M vs ~41M).
   * On the data subset, it achieved competitive validation scores against the massive **ResNet50 Baseline** (339M params) while training significantly faster.
 
 
@@ -102,11 +102,11 @@ Total params:
   * The **Updated Implementation** (Dropout 0.2 + Combo Loss) successfully mitigated overfitting. 
   * While raw metrics between Base and Updated CSE are similar, the Updated model shows a healthier convergence gap between training and validation loss.
 
----
+<!-- ---
 
 ### Project Retrospective
 * **Technical Pipeline:** Established a complete experimental workflow using modern logging/tracking tools for the first time.
 * **Limitations:** 
   * Time constraints limited the scope of hyperparameter tuning, suggesting potential for further gains in the CSE architecture.
   * What is more, the models could actually benefit from more training time to fully converge.
-* **Hyperparameter Differences:** Slightly different hyperparameters were used compared to the original paper due to several constraints, such as limited computational power. This may have contributed to the observed underperformance relative to the paper's reported results. Future work could involve further investigation into the impact of these hyperparameter choices and exploring additional configurations to bridge the performance gap.
+* **Hyperparameter Differences:** Slightly different hyperparameters were used compared to the original paper due to several constraints, such as limited computational power. This may have contributed to the observed underperformance relative to the paper's reported results. Future work could involve further investigation into the impact of these hyperparameter choices and exploring additional configurations to bridge the performance gap. -->
