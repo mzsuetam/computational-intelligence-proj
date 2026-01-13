@@ -1,6 +1,6 @@
 ![](docs/pred-target-best.png)
 
-# Aerial Image Segmentation: CSE-Unet vs. Baseline U-Net
+# Analysis of Deep Learning Architectures for Aerial Image Segmentation – Case Study of CSE-UNet vs. Classic UNet architectures
 
 Course: Computational Intelligence
 
