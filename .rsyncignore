@@ -2,3 +2,6 @@
 
 .git
 datasets/
+
+**/*.pth
+**/*.pkl
