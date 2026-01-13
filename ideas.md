@@ -50,3 +50,69 @@ Train both from scratch on labeled aerial dataset
 ---
 
 ? micro batching 
+
+---
+
+for report:
+
+- old-ds subset 500
+- old-ds
+- new-ds full
+    - new (full) dataset, cleaning
+    - target/pred on same pictures
+    - conf matrices
+    - learning curves
+- training process
+    - data preparation
+        - splitting
+        - cleaning
+        - augmentations
+    - model architectures
+        - cse unet vs unet
+    - training tricks
+        - overfitting reduction
+            - dropout
+            - weight decay
+            - data augmentation (ablumenations)
+        - early stopping
+        - fine-tuning with low lr
+        - gradient accumulation
+        - learning rate finder
+- results analysis
+    - summary old-ds
+        - unet
+        - pretrained unet
+        - cse unet
+        - cse unet + dropout
+    - summary new-ds
+        - unet
+        - cse unet + dropout
+- conclusions
+    - cse unet works better than unet
+    - dropout helps
+    - pretrained weights help
+    - data cleaning helps
+    - more data helps
+
+    A. Stability is the Hidden Feature of CSE-UNet While your slides highlight that CSE-UNet has fewer parameters (36M vs 41M for ResNet34), the new full-dataset training reveals a more critical advantage: Training Stability.
+
+        Evidence: In baseline.png, the ResNet34 model exhibits high volatility (huge loss spikes at epoch ~13 and a total crash at epoch ~50).
+
+        Contrast: In cse.png, the training is smooth. The validation Jaccard score climbs steadily without the violent fluctuations seen in the baseline.
+
+        Conclusion: The Multi-level Receptive Field Blocks (RFB) and dual-path encoder in CSE-UNet likely provide better feature regularization, preventing the model from overfitting or diverging as easily as the standard ResNet backbone.
+
+    B. The "Convergence Illusion"
+
+        Observation: You mentioned "CSE will be trained more as it does not converge."
+
+        Analysis: Looking at cse.png, the model has not stopped learning; the slope is still positive. The Baseline, however, appeared to converge faster (flattens around epoch 30) before it crashed.
+
+        Conclusion: CSE-UNet is a "slow burner." It learns more complex semantic relationships (context) which takes longer to optimize but results in a more robust model. The Baseline learned simple features quickly but failed to sustain them.
+
+    C. Intra-class Heterogeneity Handling
+
+        Context: Your slides mention "Intra-class heterogeneity" (objects of the same class looking different) as a key challenge.
+
+    Evidence: If your CSE-UNet scores are higher (or more stable) on the "Buildings" or "Impervious Surfaces" classes specifically, this proves the architecture is successfully using context to unify these varied appearances, validating the theoretical claims from the literature.
+
