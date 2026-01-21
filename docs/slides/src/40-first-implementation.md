@@ -2,7 +2,7 @@
 
 For this milestone, the goal was to **implement the CSE-Unet architecture** as described in the original paper.
 
-In addition, the goal was to **revisit the baseline model** established in the previous milestone and train in on the **updated dataset**.
+In addition, the baseline model established in the previous milestone was revisited and trained on the **updated dataset**.
 
 ## Dataset Update
 
@@ -50,8 +50,8 @@ Due to the simplicity of use, the dataset was accessed from Kaggle: [\color{red}
 > divided into image patches of size 300 × 300. These patches are divided into training (~2000
 > images) and testing (~400 images) datasets.
 
-**Important note:** To address the limitations of my computational resources, the models were trained on the subset of the dataset (200 images, train/test ratio preserved) and the images were resized to 256x256 pixels. 
-For the final evaluation, I am planning to use the full dataset.
+**Important note:** To address the limitations of computational resources, the models were trained on the subset of the dataset (200 images, train/test ratio preserved) and the images were resized to 256x256 pixels. 
+For the final evaluation, the full dataset is planned to be used.
 
 ## Baseline model retraining
 

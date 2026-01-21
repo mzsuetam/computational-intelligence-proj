@@ -2,7 +2,7 @@
 
 ## Project Summary & Key Achievements
 
-This project successfully implemented and evaluated the **Context and Semantic Enhanced (CSE) U-Net** against both standard and pretrained ResNet-based U-Net baselines for high-resolution aerial image segmentation.
+The **Context and Semantic Enhanced (CSE) U-Net** was successfully implemented and evaluated against both standard and pretrained ResNet-based U-Net baselines for high-resolution aerial image segmentation.
 
 * **Surpassing the Baseline:** Through iterative optimization, the final model (**Phase 4**) achieved a **Jaccard (IoU) of 0.681**, successfully outperforming the **ResNet-34 Pretrained Baseline**.
 * **Data-Centric Improvement:** Migrating from a noisy Kaggle subset to the official **ISPRS Potsdam benchmark** was a critical decision that stabilized training and enabled valid comparisons.
@@ -20,12 +20,12 @@ The transition from Phase 2 to Phase 4 provided critical insights into the train
 
 Despite beating the baseline, the project target **Jaccard score of 0.75** (reported in literature) was not fully met. This gap is attributed to:
 
-* **Computational Constraints:** High-resolution segmentation is resource-intensive. Limits on batch size and training time prevented us from performing the extensive hyperparameter grid-searches required to fine-tune a custom architecture to state-of-the-art levels. The possibilities of using gradient accumulation and mixed-precision training were explored, but still fell short of enabling exhaustive experimentation.
+* **Computational Constraints:** High-resolution segmentation is resource-intensive. Limits on batch size and training time prevented the extensive hyperparameter grid-searches required to fine-tune a custom architecture to state-of-the-art levels. The possibilities of using gradient accumulation and mixed-precision training were explored, but still fell short of enabling exhaustive experimentation.
 * **Loss Function Complexity:** Experiments with **Combined Loss (CE + Dice)** and **Focal Loss**—even in the stable Phase 4—consistently failed to outperform standard CrossEntropy. This confirms that for this specific architecture/dataset combination, auxiliary losses introduced gradient instability rather than refinement.
 * **The Generalization Gap:** While Dropout and Weight Decay solved early overfitting, closing the final gap to the literature benchmarks likely requires more aggressive augmentation strategies (e.g., MixUp or Mosaic) which were outside the scope of this computational budget.
 
 ## Final Takeaways
 
-* **Custom vs. Pretrained:** We demonstrated that a **custom-designed architecture (CSE-Unet) trained from scratch** can outperform a **heavy, pretrained ImageNet baseline**.
+* **Custom vs. Pretrained:** It was demonstrated that a **custom-designed architecture (CSE-Unet) trained from scratch** can outperform a **heavy, pretrained ImageNet baseline**.
 * **The Importance of Schedules:** The success of Phase 4 proves that for complex aerial data, a **multi-stage learning rate schedule** is just as critical as the architecture itself.
 * **Viability:** The model successfully addressed "intra-class heterogeneity" and demonstrated that with proper regularization and patience, deep learning can reliably segment complex urban environments.

@@ -4,11 +4,11 @@
 
 Firstly, experiments on a subset of the data (500 out of 2500 images) were conducted to compare the baseline U-Net and CSE-Unet architectures. The baseline model, with 339M parameters, achieved a Jaccard Coefficient of 0.2754, while the CSE-Unet, with only 36M parameters, trained faster and reached a higher validation Jaccard score of 0.3455. Notably, using pretrained weights for the baseline improved its performance, yielding a score of 0.5571. Overall, the CSE-Unet demonstrated efficient training and competitive results despite its smaller size.
 
-Then, further experiments were performed on the full dataset (2500 images) to evaluate the impact of dropout and a combined loss function on the CSE-Unet architecture. The base implementation of CSE-Unet showed signs of overfitting, with a significant gap between training and validation losses. By introducing a dropout rate of 0.2 in the DoubleConv blocks and employing a combined CrossEntropyLoss and DiceLoss, the updated implementation mitigated overfitting. Although raw metrics between the base and updated CSE models were similar, the updated model exhibited a healthier convergence gap, indicating improved generalization.
+Further experiments were performed on the full dataset (2500 images) to evaluate the impact of dropout and a combined loss function on the CSE-Unet architecture. The base implementation of CSE-Unet showed signs of overfitting, with a significant gap between training and validation losses. By introducing a dropout rate of 0.2 in the DoubleConv blocks and employing a combined CrossEntropyLoss and DiceLoss, the updated implementation mitigated overfitting. Although raw metrics between the base and updated CSE models were similar, the updated model exhibited a healthier convergence gap, indicating improved generalization.
 
 ## Migration to Full Dataset
 
-As the dataset provided on Kaggle was incomplete and eemed mislabeled, I migrated to a original full dataset provided by the [The International Society for Photogrammetry and Remote Sensing webpage](https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/2d-sem-label-potsdam.aspx).
+As the dataset provided on Kaggle was incomplete and eemed mislabeled, migration to a original full dataset provided by the [The International Society for Photogrammetry and Remote Sensing webpage](https://www.isprs.org/resources/datasets/benchmarks/UrbanSemLab/2d-sem-label-potsdam.aspx) was performed.
 
 Such approach required some manual data preparation (i.e. cutting images into tiles, cleaning, splitting). However, the new dataset provided significantly more data ($\approx 3300$ 512x512 tiles after cleaning vs ~2400 256x256 tiles in the Kaggle dataset), which positively impacted the model performance and generalization.
 
@@ -18,13 +18,13 @@ Such approach required some manual data preparation (i.e. cutting images into ti
 
 ## Initial comparison
 
-To assess model performance on the full dataset, I ran experiments with both the classic U-Net (using a ResNet34 backbone, matching the CSE-Unet in parameter count) and the CSE-Unet architecture enhanced with **dropout** and **weight decay**. Training settings largely mirrored previous experiments, with slight modifications to the learning rate and epoch count to better suit the expanded dataset.
+To assess model performance on the full dataset, experiments were run with both the classic U-Net (using a ResNet34 backbone, matching the CSE-Unet in parameter count) and the CSE-Unet architecture enhanced with **dropout** and **weight decay**. Training settings largely mirrored previous experiments, with slight modifications to the learning rate and epoch count to better suit the expanded dataset.
 
 - Learning rate: $\approx 1e-4$ (lr finder). 
 - Training time: $\approx 50$ epochs (early stopping).
 - Loss function: CrossEntropy*
 
-I tried using the combined CrossEntropy + Dice loss, but for bigger input sizes it led to unstable training dynamics and worse preliminary results, as Dice loss is known to be unstable for the preliminary training stages.
+The combined CrossEntropy + Dice loss was attempted, but for bigger input sizes it led to unstable training dynamics and worse preliminary results, as Dice loss is known to be unstable for the preliminary training stages.
 
 ---
 
@@ -71,17 +71,17 @@ I tried using the combined CrossEntropy + Dice loss, but for bigger input sizes 
 
 ## Further CSE Experiments
 
-To take the advantage of the fact that CSE-Unet trains stably on the full dataset, I ran further experiments to improve its performance.
+To take the advantage of the fact that CSE-Unet trains stably on the full dataset, further experiments were run to improve its performance.
 
 \vspace{1em}
 ### "Phase 2"
 
-Firstly, using the lowered lr, I trained the CSE-Unet for another 30 epochs. This led to steady improvements in validation metrics without overfitting.
+Firstly, using the lowered lr, the CSE-Unet was trained for another 30 epochs. This led to steady improvements in validation metrics without overfitting.
 
 \vspace{1em}
 ### "Phase 3"
 
-Then, I tried utilizing the combined CrossEntropy + Dice loss function again with low learning rate as it is known for the ability to "understand" the "object instances" better, as it cates to both pixel-wise accuracy and overall shape similarity. 
+Then, the combined CrossEntropy + Dice loss function was utilized again with low learning rate as it is known for the ability to "understand" the "object instances" better, as it cates to both pixel-wise accuracy and overall shape similarity. 
 Unfortunately, the try did not lead to any improvements, but did not significantly degrade the overall performance either.
 
 ---
@@ -159,7 +159,7 @@ Unfortunately, the try did not lead to any improvements, but did not significant
 | cse_phase_2         | **0.87** | **0.78**   | **0.67**            |
 | cse_phase_3         | 0.86     | 0.76       | 0.65                |
 
-Please note that there was the idea to use Test Time Augmentation (TTA) to further boost the performance, but due to performance issues on the remote server, I was not able to run the TTA experiments successfully.
+Please note that there was the idea to use Test Time Augmentation (TTA) to further boost the performance, but due to performance issues on the remote server, the TTA experiments were not able to be run successfully.
 
 ---
 

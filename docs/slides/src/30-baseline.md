@@ -1,8 +1,8 @@
 # Baseline Model
 
-For this milestone, the goal was to establish a baseline model for the project. 
+For this milestone, the primary objective was to establish a baseline model for the project. 
 
-This involved preparing the learning pipeline, selecting a simple architecture (**classic U-Net with Resnet50**), training it on the dataset, and evaluating its performance.
+This process involved the preparation of the learning pipeline, selection of a simple architecture (**classic U-Net with Resnet50**), training the model on the dataset, and evaluation of its performance.
 
 ## Input Data and Augmentation
 

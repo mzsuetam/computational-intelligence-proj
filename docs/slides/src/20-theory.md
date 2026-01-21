@@ -11,7 +11,7 @@ The research investigates whether large-scale, low-accuracy training data—spec
 
 **Technology: Adapted Fully Convolutional Network (FCN)**
 
-*   The study utilized a variant of the FCN architecture, which performs pixel-to-pixel classification, returning a structured spatially explicit label image.
+*   A variant of the FCN architecture was utilized, performing pixel-to-pixel classification and returning a structured spatially explicit label image.
 *   **Adaptation:** The FCN variant introduced a **third skip connection** (in addition to the original two) to preserve even finer image details and deliver sufficiently sharp edges in the segmentation results.
 *   **Label Generation:** OSM coordinates for buildings (polygons) and roads (centerlines with estimated widths based on highway tags) were automatically transformed into pixel-wise label maps.
   

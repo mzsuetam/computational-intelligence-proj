@@ -2,11 +2,11 @@
 
 ## Motivation
 
-Accurate aerial image segmentation is vital for up-to-date mapping and urban analysis, yet manual methods are slow and costly. Deep learning offers scalable solutions, but architectures differ in handling challenges like shadows, small objects, and class variability. By comparing key models, this project seeks the most effective approach for reliable segmentation—directly supporting my geospatial research, where high-quality segmented imagery is essential for deeper analysis and better results.
+Accurate aerial image segmentation is vital for up-to-date mapping and urban analysis, yet manual methods are slow and costly. Deep learning offers scalable solutions, but architectures differ in handling challenges like shadows, small objects, and class variability. By comparing key models, the project aims to identify the most effective approach for reliable segmentation, supporting geospatial research where high-quality segmented imagery is essential for deeper analysis and improved results.
 
 ## Project overview
 
-This project focuses on **aerial image segmentation**, a key task in remote sensing with applications in mapping, urban planning, and environmental monitoring. The objective is to **compare the performance of different deep learning architectures**, ranging from classic convolutional neural networks (CNNs) to advanced models such as **U-Net** and U-Net–derived architectures (e.g, MultiRes-UNet, and CSE-UNet). Using publicly available datasets like **iSAID** or the **Dubai Aerial Imagery dataset**, the project evaluates model performance to identify the most reliable and efficient one.
+The project focuses on **aerial image segmentation**, a key task in remote sensing with applications in mapping, urban planning, and environmental monitoring. The objective is to **compare the performance of different deep learning architectures**, ranging from classic convolutional neural networks (CNNs) to advanced models such as **U-Net** and U-Net–derived architectures (e.g., MultiRes-UNet, and CSE-UNet). Using publicly available datasets like **iSAID** or the **Dubai Aerial Imagery dataset**, model performance is evaluated to identify the most reliable and efficient architecture.
 
 ## Literature overview
 

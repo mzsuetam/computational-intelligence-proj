@@ -1,8 +1,8 @@
 # Final experiments
 
-To conclude the experiments on the new dataset, I performed a few additional experiments on the CSE-Unet model.
+To conclude the experiments on the new dataset, additional experiments were performed on the CSE-Unet model.
 
-Recall: Current best model is cse_phase_2: best Jaccard Coef Multi 0.671; trained using lr-s `slice(1e-6, 1e-4)` and effective batch size of 16 (4 GPU batches × 4 accumulation steps).
+The current best model is cse_phase_2: best Jaccard Coef Multi 0.671; trained using lr-s `slice(1e-6, 1e-4)` and effective batch size of 16 (4 GPU batches  4 accumulation steps).
 
 ---
 

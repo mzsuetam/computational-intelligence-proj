@@ -26,3 +26,6 @@ install-aghmd:
 # Prints the list of available commands with descriptions
 help:
     just --list
+
+extract-theory-from-slides:
+    pdftk out/slides-latest.pdf cat 1-20 75-76 output out/slides-theory.pdf

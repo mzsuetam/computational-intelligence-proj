@@ -2,9 +2,7 @@
 
 ## Preliminary experiments recap
 
-> Slide 34
-
-Experiments on a subset of the data (500 out of 2500 images).
+Experiments were conducted on a subset of the data (500 out of 2500 images).
 
 \scriptsize
 
